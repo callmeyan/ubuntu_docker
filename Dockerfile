@@ -13,7 +13,7 @@ ADD run.sh /run.sh
 RUN chmod +x /*.sh
 # Set Env is unused ssh key
 ENV AUTHORIZED_KEYS **None**
-
+VOLUME  ["/etc/apache2", "/var/lib/mysql" ]
 
 EXPOSE 80 22 21 443
 CMD ["/run.sh"]
